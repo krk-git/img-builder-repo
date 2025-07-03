@@ -50,16 +50,18 @@ packer {
 }
 
 source "googlecompute" "imagebuilder" {
-  project_id              = ramakrishna-test
-  source_image            = debian-11-bullseye-v20250610
-  zone                    = us-central1-a
+  project_id              = "ramakrishna-test"
+  source_image            = "debian-11-bullseye-v20250610"
+  zone                    = "us-central1-a"
   machine_type            = "c4a-standard-4"
   disk_type               = "hyperdisk-balanced"
   disk_size               = 50
-  image_name              = debian11
-  image_description       = 
+  image_name              = "debian11"
+  image_description       = "Custom Debian 11 image for image builder" # Or var.target_image_description
   image_storage_locations = [var.target_image_region]
-  image_labels            = owner : ramakrishna
+  image_labels            = {
+    owner = "ramakrishna"
+  } # Or var.target_image_labels
   use_iap                 = true
   image_encryption_key {
     kmsKeyName            = var.target_image_encryption_key
