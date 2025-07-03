@@ -67,7 +67,7 @@ source "googlecompute" "imagebuilder" {
   disk_encryption_key {
     kmsKeyName            = var.target_image_encryption_key
   }
-  ssh_username            = "image-builder"
+  ssh_username            = "imagebuilder"
 }
 
 build {
