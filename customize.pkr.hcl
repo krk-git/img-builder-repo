@@ -56,7 +56,7 @@ source "googlecompute" "imagebuilder" {
   machine_type            = "e2-standard-4" # Or any other x86-64 machine type
   disk_type               = "pd-balanced"
   disk_size               = 50
-  image_name              = "debian11"
+  image_name              = var.target_image_name
   image_description       = "Custom Debian 11 image for image builder" # Or var.target_image_description
   image_storage_locations = [var.target_image_region]
   image_labels            = {
