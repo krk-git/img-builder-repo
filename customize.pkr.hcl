@@ -53,7 +53,7 @@ source "googlecompute" "imagebuilder" {
   project_id              = "ramakrishna-test"
   source_image            = "debian-11-bullseye-v20250610"
   zone                    = "us-central1-a"
-  machine_type            = "c4a-standard-4"
+  machine_type            = "e2-standard-4" # Or any other x86-64 machine type
   disk_type               = "hyperdisk-balanced"
   disk_size               = 50
   image_name              = "debian11"
