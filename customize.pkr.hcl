@@ -54,7 +54,7 @@ source "googlecompute" "imagebuilder" {
   source_image            = "debian-11-bullseye-v20250610"
   zone                    = "us-central1-a"
   machine_type            = "e2-standard-4" # Or any other x86-64 machine type
-  disk_type               = "hyperdisk-balanced"
+  disk_type               = "pd-balanced"
   disk_size               = 50
   image_name              = "debian11"
   image_description       = "Custom Debian 11 image for image builder" # Or var.target_image_description
